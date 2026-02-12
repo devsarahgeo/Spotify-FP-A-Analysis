@@ -120,7 +120,7 @@ Designed a multi-table analytical model using SQL (joins, CTEs, window functions
 Olist Dataset - https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/
 
 <h3>2. Architecture Diagram:</h3>
-<img width="704" height="1082" alt="Olist E-commerce Data Pipeline Architecture - visual selection" src="https://github.com/user-attachments/assets/538fadba-f2f6-4a2e-8144-64a641c1303d" />
+![Architecture - visual selection](https://github.com/user-attachments/assets/1ff6b62b-9bb6-40cd-9654-705d385823f7)
 
 <h3>3. Database (Postgres) showing cardinality relationship</h3>
 <img width="1461" height="814" alt="Screenshot 2026-01-29 at 5 14 20 PM" src="https://github.com/user-attachments/assets/65e1e763-07a8-4db0-90fb-7d74d2534433" />
