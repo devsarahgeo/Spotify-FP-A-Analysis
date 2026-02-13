@@ -1,4 +1,4 @@
-# Spotify FP&A Analysis
+# Spotify FP&A (Financial Planning & Analysis)
 
 ## 🧭 Executive Summary 
 <p>
