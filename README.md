@@ -103,10 +103,9 @@ Which segments contribute most to GMV?
 ## 🧠 Skills & Tech Stack
 <ul>
   <li><strong>Visual Studio Code</strong> – Central development environment</li>
-    <li><strong>PostgreSQL</strong> – Raw Data Store</li>
+    <li><strong>Google Clod storage (GCS)</strong> – Raw Data Store (Data Lake)</li>
   <li><strong>BigQuery</strong> – Cloud Data Warehouse</li>
-
-  <li><strong>Looker</strong> – Data visualization and storytelling</li>
+  <li><strong>PowerBI</strong> – Data visualization and storytelling</li>
   <li><strong>SQL and Python</strong> – Analytical querying</li>
 </ul>
 
