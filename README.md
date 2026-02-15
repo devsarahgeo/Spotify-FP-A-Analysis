@@ -33,47 +33,43 @@ Answering these questions helps the business identify growth opportunities, redu
 ## ❓ Analysis Questions 
 <p>
   
-#### GMV:
-Which sellers contribute the most to GMV?
+#### Revenue & Engagement Questions
 
-Which product categories drive the highest GMV?
+Which playlists, artists, or podcasts drive the most ad revenue?
 
-How does GMV trend over months? Are there seasonal spikes?
+How does user engagement (streams, playlist followers) impact revenue?
 
-#### Order Volume & Growth
+Which content types (music vs. podcasts) are more profitable?
 
-How many orders are placed per month?
+How seasonal trends or release patterns affect monetization?
 
-How many new vs returning customers are placing orders?
+#### Cost & Margin Questions
 
-#### Customer Behavior
+What is the royalty cost per stream or per podcast?
 
-What is the repeat buyer rate per month?
+How does content cost vs revenue vary by month or content type?
 
-Which cities or regions have the highest number of active buyers?
+Which segments or content types have the highest gross margin?
 
-Do certain product categories have higher repeat purchases?
+#### Scenario & Forecasting Questions
 
-#### Operational / Cancellation Metrics
+What happens if streams increase 10–20%?
 
-What is the order cancellation rate over time?
+What is the impact of a 5–10% CPM change on revenue?
 
-Are cancellations clustered by seller? Which seller regions are slower to ship?
+Which content types or geographies provide the best ROI?
 
-Which product categories have the most canceled orders?
+#### KPI / Dashboard Metrics
 
-#### Delivery / Logistics
+Total streams & active users
 
-What is the average delivery time?
+Ad impressions (proxy for revenue)
 
-Are certain sellers or cities experiencing delays?
+Revenue by content type & geography
 
+Gross margin per month
 
-#### Customer Segmentation / Clustering
-
-Can we segment buyers into high-value / mid-value / low-value groups using RFM (Recency, Frequency, Monetary)?
-
-Which segments contribute most to GMV?
+CPM sensitivity / scenario analysis
 
 
 </p>
