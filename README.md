@@ -35,23 +35,64 @@ Answering these questions helps the business identify growth opportunities, redu
   
 #### Revenue & Engagement Questions
 
-Which playlists, artists, or podcasts drive the most ad revenue?
+Revenue = (Streams × Impressions per stream × CPM)
+
+
+Which playlists, artists, or podcasts drive the most revenue?
+
+Which playlists drive engagement?
 
 How does user engagement (streams, playlist followers) impact revenue?
 
 Which content types (music vs. podcasts) are more profitable?
 
+Which genres monetize best?
+
 How seasonal trends or release patterns affect monetization?
 
-#### Cost & Margin Questions
+How sensitive revenue is to CPM changes?
 
-What is the royalty cost per stream or per podcast?
+#### Unit Economics Questions
+(Revenue per stream
+Cost per stream (royalty)
+Gross margin per stream
+)
+
+Are podcasts more profitable than music?
+
+Does higher engagement always mean higher margin? or What is the royalty cost per stream or per podcast?
+
+Which content destroys margin?
+
+#### Cost & Margin Questions
 
 How does content cost vs revenue vary by month or content type?
 
 Which segments or content types have the highest gross margin?
 
+### Margin Analysis
+Where does the business actually make money?
+
+What should Spotify invest more in?
+
 #### Scenario & Forecasting Questions
+(You can model:
+
++10% streams
+
+-5% CPM
+
+Royalty increase
+
+Geographic shift
+
+Now you're answering:
+
+If CPM drops 10%, what happens to margin?
+
+That’s not reporting.
+
+That’s forecast modeling.)
 
 What happens if streams increase 10–20%?
 
