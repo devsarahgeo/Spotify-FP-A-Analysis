@@ -38,7 +38,7 @@ Answering these questions helps the business identify growth opportunities, redu
 Revenue = (Streams × Impressions per stream × CPM)
 
 
-Which playlists and artists drive the most revenue? - 
+Which podcasts, tracks and artists drive the most revenue? - 
 Interpretation:
 
 “Top 10 artists contribute 45% of total simulated ad revenue.”
