@@ -153,7 +153,7 @@ CPM sensitivity / scenario analysis
 Designed a multi-table analytical model using SQL (joins, CTEs, window functions) and Python to derive core e-commerce metrics. Conducted category, regional, and customer segmentation analysis to identify GTM opportunities and growth signals, and communicated insights via Looker dashboards.
 
 <h3>1. Dataset Used:</h3> 
-Olist Dataset - https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/
+Spotify Web API - https://developer.spotify.com/documentation/web-api/
 
 Note: Since Spotify’s public API does not provide stream counts or ad monetization metrics, I constructed a revenue simulation model using track popularity as a proxy for demand. Streams were estimated as popularity × 1000, impressions per stream were randomized between 1–3 based on typical ad loads, and CPM was assumed at $5 based on industry benchmarks. This allows scenario-based revenue modeling for analytical purposes.
 
