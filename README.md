@@ -155,6 +155,8 @@ Designed a multi-table analytical model using SQL (joins, CTEs, window functions
 <h3>1. Dataset Used:</h3> 
 Olist Dataset - https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/
 
+Note: Since Spotify’s public API does not provide stream counts or ad monetization metrics, I constructed a revenue simulation model using track popularity as a proxy for demand. Streams were estimated as popularity × 1000, impressions per stream were randomized between 1–3 based on typical ad loads, and CPM was assumed at $5 based on industry benchmarks. This allows scenario-based revenue modeling for analytical purposes.
+
 <h3>2. Architecture Diagram:</h3>
 <img width="704" height="1041" alt="Screenshot 2026-01-29 at 5 14 20 PM" src="https://github.com/user-attachments/assets/4c3bff78-b182-4cdd-9246-8af6d9d77fad" />
 
