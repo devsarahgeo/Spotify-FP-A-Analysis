@@ -2,31 +2,24 @@
 
 ## 🧭 Executive Summary 
 <p>
-Identify the key drivers of ad and podcast revenue and quantify how user engagement, content mix, and pricing affect revenue growth.
-
-Primary Question:
-How do user engagement and content consumption patterns influence advertising and podcast revenue, and what strategic levers can a streaming platform use to maximize monetization and long-term growth?
-
+This analysis evaluates the key financial drivers of advertising and podcast revenue. It examines how user engagement, content mix (music vs. podcasts), pricing strategy, and ad monetization efficiency influence revenue growth, gross margins, and long-term profitability.
+  
 </p>
 
 ---
 
 ### 💼 Business Problem
 <p>
-Olist marketplace wanted to understand trends in order volumes, cancellations, and repeat buyers over time, as these metrics affect revenue and customer retention. Without this insight, management cannot identify growth opportunities or operational challenges.
-  
-Key Questions:
-<ul>
-  <li> Which sellers and product categories drive the most GMV and revenue?</li>
-  
-  <li> How order volumes and cancellations are trending month-to-month?</li>
-  
-  <li> How repeat customers behave and which segments are most valuable?</li>
-</ul
+Spotify needs to improve revenue growth and profitability, but it is unclear which operational and financial levers (engagement, content mix, pricing, or ad monetization) have the greatest impact on margins and long-term value.
 
-Answering these questions helps the business identify growth opportunities, reduce operational issues (like cancellations), and improve customer retention.
+Without understanding these drivers, the company cannot confidently decide:
 
-<b>Core Challenge</b>: How can the marketplace increase revenue, reduce cancellations, and retain more customers?
+Whether to push podcast growth vs. music
+
+Whether to increase ad load
+
+Where to allocate investment for maximum profitability
+
 </p>
 
 ---
@@ -35,13 +28,7 @@ Answering these questions helps the business identify growth opportunities, redu
   
 #### Revenue & Engagement Questions
 
-Revenue = (Streams × Impressions per stream × CPM)
-
-
 Which podcasts, tracks and artists drive the most revenue? - 
-Interpretation:
-
-“Top 10 artists contribute 45% of total simulated ad revenue.”
 
 Which playlists drive engagement?
 
@@ -51,32 +38,17 @@ Which content types (music vs. podcasts) are more profitable?
 
 Which genres monetize best?
 
-How seasonal trends or release patterns affect monetization?
+How release patterns affect monetization?
 
 How sensitive revenue is to CPM changes?
 
-#### Unit Economics Questions
-(Revenue per stream
-Cost per stream (royalty)
-Gross margin per stream
-)
-
-Are podcasts more profitable than music?
-
-Does higher engagement always mean higher margin? or What is the royalty cost per stream or per podcast?
-
-Which content destroys margin?
-
 #### Cost & Margin Questions
 
-How does content cost vs revenue vary by month or content type?
+Are podcasts more profitable than music? or Which content types have the highest gross margin? or What should Spotify invest more in?
 
-Which segments or content types have the highest gross margin?
+Does higher engagement always mean higher margin? 
 
-### Margin Analysis
-Where does the business actually make money?
-
-What should Spotify invest more in?
+Which content destroys margin?
 
 #### Scenario & Forecasting Questions
 (You can model:
