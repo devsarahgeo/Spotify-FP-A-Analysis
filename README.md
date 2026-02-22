@@ -30,11 +30,7 @@ Where to allocate investment for maximum profitability
 
 Which podcasts, tracks and artists drive the most revenue? - 
 
-Which playlists drive engagement?
-
-How does user engagement (streams, playlist followers) impact revenue?
-
-Which content types (music vs. podcasts) are more profitable?
+How does user engagement (streams) impact revenue?
 
 Which genres monetize best?
 
@@ -74,19 +70,6 @@ What happens if streams increase 10–20%?
 What is the impact of a 5–10% CPM change on revenue?
 
 Which content types or geographies provide the best ROI?
-
-#### KPI / Dashboard Metrics
-
-Total streams & active users
-
-Ad impressions (proxy for revenue)
-
-Revenue by content type & geography
-
-Gross margin per month
-
-CPM sensitivity / scenario analysis
-
 
 </p>
 
