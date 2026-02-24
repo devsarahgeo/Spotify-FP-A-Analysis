@@ -2,14 +2,14 @@
 
 ## 🧭 Executive Summary 
 <p>
-This analysis evaluates Spotify's 2024 advertising revenue performance across content type, artist, and time — identifying key drivers of ad revenue growth and gross margin to inform strategic investment and promotional decisions that maximize long-term profitability.
+This analysis evaluates Spotify's 2024 advertising revenue performance across content type, artist, and time, identifying key drivers of ad revenue growth and gross margin to inform strategic investment and promotional decisions that maximize long-term profitability.
 </p>
 
 ---
 
 ### 💼 Business Problem
 <p>
-Spotify needs to improve ad revenue growth and profitability, but it is unclear which levers — content mix, stream volume, or artist investment, have the greatest impact on margins. Without understanding these drivers, the company cannot confidently decide whether to prioritize podcast vs music growth, or where to allocate promotional investment for maximum return.
+Spotify needs to improve ad revenue growth and profitability, but it is unclear which levers - content mix, stream volume, or artist investment, have the greatest impact on margins. Without understanding these drivers, the company cannot confidently decide whether to prioritize podcast vs music growth, or where to allocate promotional investment for maximum return.
 
 </p>
 
@@ -41,7 +41,7 @@ What is the impact of a 5–10% CPM change on revenue?
 
 ## 💻 Git File Structure Explained:
 
-<strong>eda_notebook/modeling.ipynb</strong> : scenario model using the key revenue levers — stream volume and CPM — to project revenue uplift under different investment scenarios. 
+<strong>eda_notebook/modeling.ipynb</strong> : scenario model using the key revenue levers like stream volume and CPM, to project revenue uplift under different investment scenarios. 
 
 <strong>extract/</strong> : using spotify web api to extract tables needed and dump then to Google Cloud Storage(GCS)
 
@@ -67,21 +67,25 @@ What is the impact of a 5–10% CPM change on revenue?
 <h3>1. Dataset Used:</h3> 
 Spotify Web API - https://developer.spotify.com/documentation/web-api/
 
-Note: Since Spotify’s public API does not provide stream counts or ad monetization metrics, I constructed a revenue simulation model using track popularity as a proxy for demand. Streams were estimated as popularity × 1000, impressions per stream were randomized between 1–3 based on typical ad loads, and CPM was assumed at $5 based on industry benchmarks. This allows scenario-based revenue modeling for analytical purposes.
+Note: 
+- Since Spotify’s public API does not provide stream counts or ad monetization metrics, I constructed a revenue simulation model using track popularity as a proxy for demand. Streams were estimated as popularity × 1000, impressions per stream were randomized between 1–3 based on typical ad loads, and CPM was assumed at $5 for tracks and $10 for podcasts based on industry benchmarks.
 
-I simulated the user data, I used a constant CPM throught 2024 and since stream impressions are less and dataset size is small,  hence overall revenue will be a small amnt
+- I simulated the user data table and since I used a constant CPM throught 2024 and since stream impressions are less and dataset size is small, hence overall revenue will be a small amnt
 
 <h3>2. Architecture Diagram:</h3>
 <img width="696" height="1106" alt="Olist E-commerce Data Pipeline Architecture - visual selection (2)" src="https://github.com/user-attachments/assets/58e75b41-91e4-4576-90ee-95a81410b152" />
 
 <h3>dbt Implementation:</h3>
 
-- Staging layer — standardized raw BigQuery tables through column renaming, data type casting and null handling, creating clean reusable source models
-- Intermediate layer — applied business logic and joins across staging models to create enriched datasets for downstream consumption
-- Marts layer — built production-ready dimensional models (dim/fct tables) consumed directly by Power BI for reporting
-- Seeds — used for static reference data (e.g. CPM rates by content type) loaded directly into BigQuery via dbt
-- Macros — wrote reusable SQL macros to standardize repetitive transformation logic across models
-- Testing — implemented schema tests (not_null, unique, accepted_values) and custom tests for each layer to ensure data quality and pipeline reliability
+- Staging layer - standardized raw BigQuery tables through column renaming creating clean reusable source models
+- Intermediate layer - applied business logic and joins across staging models to create enriched datasets for downstream consumption
+- Marts layer - built production-ready dimensional models (dim/fct tables) consumed directly by Power BI for reporting
+- Seeds - used for static reference data (e.g. CPM rates by content type) loaded directly into BigQuery via dbt
+- Macros - wrote reusable SQL macros to standardize repetitive transformation logic across models
+- Testing - implemented schema tests (not_null, unique, accepted_values) for each layer and custom tests to ensure data quality and pipeline reliability
+
+<h3>Lineage graph of podcasts using "dbt generate docs"</h3>
+<img width="1811" height="737" alt="dbt generate" src="https://github.com/user-attachments/assets/5cdccc8b-093f-45ef-a621-c6e1148607a7" />
 
 <h3>Power BI & Advanced Analytics:</h3>
 
@@ -94,7 +98,6 @@ I simulated the user data, I used a constant CPM throught 2024 and since stream 
 <img width="1161" height="490" alt="gcs" src="https://github.com/user-attachments/assets/33f8568d-e52e-469e-a4e6-9c60aa02bea9" />
 
 <img width="978" height="829" alt="google bigquery" src="https://github.com/user-attachments/assets/45ad3974-8624-4480-a837-950d6aead859" />
-
 
 ---
 
@@ -116,10 +119,10 @@ Power BI Report Snapshot:
 
 <ul>
 <li> <b>Automation & Orchestration:</b>: 
-Apache Airflow can be used to schedule and orchestrate the end-to-end ELT pipeline — automating data ingestion from Spotify API, GCS uploads, BigQuery loads and dbt model runs on a daily/weekly cadence, replacing manual execution with a fully automated workflow.</li>
+Apache Airflow can be used to schedule and orchestrate the end-to-end ELT pipeline by automating data ingestion from Spotify API, GCS uploads, BigQuery loads and dbt model runs on a daily/weekly basis, replacing manual execution with a fully automated workflow.</li>
 
 <li> <b>Real-time streaming</b>:
-Replace batch ingestion with real-time streaming using Google Pub/Sub or Kafka — enabling live ad revenue monitoring</li>
+Replace batch ingestion with real-time streaming using Google Pub/Sub or Kafka for live ad revenue monitoring</li>
 </ul>
 
 
