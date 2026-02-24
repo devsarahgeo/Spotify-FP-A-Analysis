@@ -117,7 +117,7 @@ Note: Since Spotify’s public API does not provide stream counts or ad monetiza
 I simulated the user data, I used a constant CPM throught 2024 and since stream impressions are less and dataset size is small,  hence overall revenue will be a small amnt
 
 <h3>2. Architecture Diagram:</h3>
-<img width="704" height="1041" alt="Screenshot 2026-01-29 at 5 14 20 PM" src="https://github.com/user-attachments/assets/4c3bff78-b182-4cdd-9246-8af6d9d77fad" />
+<img width="724" height="1169" alt="Olist E-commerce Data Pipeline Architecture - visual selection (2)" src="https://github.com/user-attachments/assets/963db6e0-f50c-4b46-921d-3b693ddce5f9" />
 
 <h3>3. Database (Postgres) showing cardinality relationship</h3>
 <img width="1461" height="814" alt="Screenshot 2026-01-29 at 5 14 20 PM" src="https://github.com/user-attachments/assets/65e1e763-07a8-4db0-90fb-7d74d2534433" />
