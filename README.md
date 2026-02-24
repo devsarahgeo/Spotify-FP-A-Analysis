@@ -89,7 +89,7 @@ Note:
 
 <h3>Power BI & Advanced Analytics:</h3>
 
-- Built advanced DAX measures including MoM% revenue change, dynamic min/max data point identification and a calculated sort column for short month formatting
+- Built advanced DAX measures including MoM% revenue change, dynamic min/max data point identification and a calculated sort column for abbreviated month sorting(on chart)
 - Developed a driver-based scenario model projecting revenue uplift under 10-20% stream growth and 5-10% CPM change scenarios — providing actionable forecasting without reliance on black-box statistical models
 - Designed an interactive dashboard with content type slicer enabling dynamic filtering across all visuals
 
