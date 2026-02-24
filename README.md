@@ -3,7 +3,6 @@
 ## 🧭 Executive Summary 
 <p>
 This analysis evaluates the key financial drivers of advertising and podcast revenue. It examines how user engagement, content mix (music vs. podcasts), pricing strategy, and ad monetization efficiency influence revenue growth, gross margins, and long-term profitability.
-  
 </p>
 
 ---
@@ -115,6 +114,8 @@ Spotify Web API - https://developer.spotify.com/documentation/web-api/
 
 Note: Since Spotify’s public API does not provide stream counts or ad monetization metrics, I constructed a revenue simulation model using track popularity as a proxy for demand. Streams were estimated as popularity × 1000, impressions per stream were randomized between 1–3 based on typical ad loads, and CPM was assumed at $5 based on industry benchmarks. This allows scenario-based revenue modeling for analytical purposes.
 
+I simulated the user data, I used a constant CPM throught 2024 and since stream impressions are less and dataset size is small,  hence overall revenue will be a small amnt
+
 <h3>2. Architecture Diagram:</h3>
 <img width="704" height="1041" alt="Screenshot 2026-01-29 at 5 14 20 PM" src="https://github.com/user-attachments/assets/4c3bff78-b182-4cdd-9246-8af6d9d77fad" />
 
@@ -125,16 +126,9 @@ Note: Since Spotify’s public API does not provide stream counts or ad monetiza
 
 ## 📈 Results
 
-Looker Report Snapshot:
+Power BI Report Snapshot:
 
-
-<img width="974" height="872" alt="Screenshot 2026-01-29 at 2 09 56 PM" src="https://github.com/user-attachments/assets/b76e3feb-d43a-4e8c-b9c8-501076d8d2bc" />
-
-<img width="973" height="878" alt="Screenshot 2026-01-29 at 2 10 03 PM" src="https://github.com/user-attachments/assets/3632ecca-9132-41a2-be19-241ab89230b7" />
-
-<img width="963" height="879" alt="Screenshot 2026-01-29 at 2 33 16 PM" src="https://github.com/user-attachments/assets/b6e31d8f-85fd-4a4d-88c6-b9f09e8ee55c" />
-
-<img width="974" height="657" alt="Screenshot 2026-01-29 at 2 10 14 PM" src="https://github.com/user-attachments/assets/aa8d2ba3-db1e-4f78-bbf0-2ac850875ae6" />
+<img width="1425" height="803" alt="Screenshot 2026-02-24 at 12 24 11 AM" src="https://github.com/user-attachments/assets/cce9a27e-d779-46ed-9a2e-d88423ba2822" />
 
 
 ---
