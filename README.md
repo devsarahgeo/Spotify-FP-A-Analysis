@@ -111,7 +111,7 @@ Power BI Report Snapshot:
 
 ## 📊 Business Insights & Recommendations
 
-<img width="1363" height="401" alt="Screenshot 2026-02-24 at 12 57 01 PM" src="https://github.com/user-attachments/assets/047c8725-f9a6-43b7-baca-45cb892cbcaa" />
+<img width="1363" height="401" alt="Screenshot 2026-02-24 at 12 57 01 PM" src="https://github.com/user-attachments/assets/29dae48a-994a-4bd7-ab6d-8e9b3e10a1e9" />
 
 ---
 
