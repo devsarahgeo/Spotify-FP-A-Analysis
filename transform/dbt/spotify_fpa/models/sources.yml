@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw           
+    database: fp-and-a   
+    schema: raw          
+    tables:
+      - name: artists
+      - name: playlist_details
+      - name: playlists
+      - name: tracks
+      - name: podcasts
+      - name: podcast_details

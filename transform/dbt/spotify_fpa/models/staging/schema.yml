@@ -1,0 +1,159 @@
+version: 2
+
+models:
+  - name: stg_artists
+    description: "Staging table for artists data from Spotify"
+    columns:
+      - name: artist_id
+        description: "Unique ID for each artist"
+        tests:
+          - not_null
+          - unique
+
+      - name: artist_name
+        description: "Name of the artist"
+        tests:
+          - not_null
+
+      - name: genres
+        description: "Comma-separated list of genres for the artist"
+
+      - name: followers
+        description: "Number of followers the artist has on Spotify"
+        tests:
+          - not_null
+
+  - name: stg_playlists
+    description: "Staging table for playlists data from Spotify"
+    columns:
+      - name: playlist_id
+        description: "Unique ID for each playlist"
+
+      - name: playlist_name
+        description: "Name of the playlist"
+        tests:
+          - not_null
+
+      - name: owner_name
+        description: "Name of the playlist owner"
+        tests:
+          - not_null
+
+      - name: genre
+        description: "Genre of the playlist"
+
+  - name: stg_playlist_details
+    description: "Staging table for playlist details data from Spotify"
+    columns:
+      - name: playlist_id
+        description: "Unique ID for each playlist"
+
+      - name: playlist_name
+        description: "Name of the playlist"
+
+      - name: followers_count
+        description: "Number of followers the playlist has on Spotify"
+
+      - name: owner_name
+        description: "Name of the playlist owner"
+
+  - name: stg_podcasts
+    description: "Staging table for podcasts data from Spotify"
+    columns:
+      - name: podcast_id
+        description: "Unique ID for each podcast"
+
+      - name: podcast_name
+        description: "Name of the podcast"
+        tests:
+          - not_null
+
+      - name: publisher
+        description: "Publisher of the podcast"
+        tests:
+          - not_null
+
+      - name: total_episodes
+        description: "Total number of episodes in the podcast"
+
+
+      - name: languages
+        description: "Comma-separated list of languages for the podcast"
+
+      - name: media_type
+        description: "Type of media (e.g., audio, video)"
+        tests:
+          - not_null
+
+      - name: genre
+        description: "Genre of the podcast"
+
+  - name: podcast_details
+    description: "Staging table for podcast details data from Spotify"
+    columns:
+      - name: podcast_id
+        description: "Unique ID for each podcast"
+        tests:
+          - not_null
+          - unique
+
+      - name: podcast_name
+        description: "Name of the podcast"
+        tests:
+          - not_null
+
+      - name: publisher
+        description: "Publisher of the podcast"
+        tests:
+          - not_null
+
+      - name: total_episodes
+        description: "Total number of episodes in the podcast"
+        tests:
+          - not_null
+      - name: languages
+        description: "Comma-separated list of languages for the podcast"  
+
+      - name: media_type
+        description: "Type of media (e.g., audio, video)"
+        tests:
+          - not_null
+  - name: stg_tracks
+    description: "Staging table for tracks data from Spotify"
+    columns:
+      - name: track_id
+        description: "Unique ID for each track"
+
+      - name: artist_id
+        description: "ID of the artist for the track"
+        tests:
+          - not_null
+
+      - name: popularity
+        description: "Spotify popularity score for track"
+        tests:
+          - not_null
+
+      - name: track_name
+        description: "Name of the track"
+        tests:
+          - not_null
+      - name: artist_name
+        description: "Name of the artist for the track"
+        tests:
+          - not_null  
+
+      - name: album_total_tracks
+        description: "Total number of tracks in the album"
+        tests:
+          - not_null
+
+      - name: duration_ms
+        description: "Duration of the track in milliseconds"
+        tests:
+          - not_null
+
+      - name: release_date
+        description: "Release date of the track"
+        tests:
+          - not_null

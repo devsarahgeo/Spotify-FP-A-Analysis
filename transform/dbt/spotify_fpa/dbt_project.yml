@@ -1,0 +1,35 @@
+name: spotify_fpa
+version: '1.0.0'
+profile: 'spotify_fpa'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:        
+  - "target"
+  - "dbt_packages"
+
+
+models:
+  spotify_fpa:
+    +materialized: view
+    staging:
+      +dataset: staging
+      +materialized: view
+
+    intermediate:
+      +dataset: int
+      +materialized: view
+
+    mart:
+      dim:
+        +dataset: dim
+        +materialized: table
+      fct:
+        +dataset: fct
+        +materialized: table
+

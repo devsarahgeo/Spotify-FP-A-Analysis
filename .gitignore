@@ -1,0 +1,5 @@
+.env
+*.json
+s3_uploader.py
+photos/
+*.pyc

@@ -1,0 +1,79 @@
+[0m15:52:29.272962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1204c4710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1206e86e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1206e8290>]}
+
+
+============================== 15:52:29.276129 | 8082e77e-27db-4a90-b173-5c3c1e9bbc25 ==============================
+[0m15:52:29.276129 [info ] [MainThread]: Running with dbt=1.11.2
+[0m15:52:29.276595 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'debug': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'target_path': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'use_colors': 'True', 'log_path': '/Users/sarah/Desktop/git/Spotify FP&A/logs', 'log_cache_events': 'False', 'profiles_dir': '/Users/sarah/.dbt', 'quiet': 'False', 'write_json': 'True', 'printer_width': '80', 'warn_error': 'None', 'log_format': 'default', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True'}
+[0m15:52:29.278746 [info ] [MainThread]: [[33mWARNING[0m][GenericJSONSchemaValidationDeprecation]: Deprecated
+functionality
+'name' is a required property at top level in file
+`/Users/sarah/Desktop/git/Spotify FP&A/dbt_project.yml` is possibly a
+deprecation. This generally means that either we failed to catch this as a more
+specific deprecation type OR our JSONSchema had a regression (and this
+deprecation was erroneous).
+[0m15:52:29.281892 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Required "name" field not present in project
+
+Error encountered in /Users/sarah/Desktop/git/Spotify FP&A/dbt_project.yml
+[0m15:52:29.283149 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.055120252, "process_in_blocks": "0", "process_kernel_time": 0.13473, "process_mem_max_rss": "112279552", "process_out_blocks": "0", "process_user_time": 0.702756}
+[0m15:52:29.283474 [debug] [MainThread]: Command `cli deps` failed at 15:52:29.283422 after 0.06 seconds
+[0m15:52:29.283672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1204c5700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1206e8620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1206ea090>]}
+[0m15:52:29.283862 [debug] [MainThread]: Flushing usage events
+[0m15:52:29.374780 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:16:25.053882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056205c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1322c7320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1322c6ff0>]}
+
+
+============================== 16:16:25.057196 | f9cd966f-dec8-4f0e-9b7e-0e1f98ed8413 ==============================
+[0m16:16:25.057196 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:16:25.057680 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'write_json': 'True', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'use_colors': 'True', 'log_path': 'logs', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug --profiles-dir /Users/sarah/.dbt', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/sarah/.dbt', 'debug': 'False', 'quiet': 'False', 'warn_error': 'None', 'log_format': 'default', 'use_experimental_parser': 'False', 'empty': 'None', 'no_print': 'None', 'target_path': 'None'}
+[0m16:16:25.067715 [info ] [MainThread]: dbt version: 1.11.2
+[0m16:16:25.068032 [info ] [MainThread]: python version: 3.12.4
+[0m16:16:25.068250 [info ] [MainThread]: python path: /Users/sarah/anaconda3/envs/sarah_env/bin/python
+[0m16:16:25.068398 [info ] [MainThread]: os info: macOS-15.0-arm64-arm-64bit
+[0m16:16:25.490316 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m16:16:25.490623 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m16:16:25.490791 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m16:16:34.842944 [info ] [MainThread]: Using profiles dir at /Users/sarah/.dbt
+[0m16:16:34.843496 [info ] [MainThread]: Using profiles.yml file at /Users/sarah/.dbt/profiles.yml
+[0m16:16:34.843724 [info ] [MainThread]: Using dbt_project.yml file at /Users/sarah/Desktop/git/Spotify FP&A/dbt_project.yml
+[0m16:16:34.843930 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m16:16:34.844210 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 9.825187, "process_in_blocks": "0", "process_kernel_time": 3.730861, "process_mem_max_rss": "434634752", "process_out_blocks": "0", "process_user_time": 6.286852}
+[0m16:16:34.844635 [debug] [MainThread]: Command `dbt debug` failed at 16:16:34.844576 after 9.83 seconds
+[0m16:16:34.844846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x130b1be00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16e265190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x165e90da0>]}
+[0m16:16:34.845057 [debug] [MainThread]: Flushing usage events
+[0m16:16:34.926459 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:46:16.793534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117c9790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1129c35f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1129c3290>]}
+
+
+============================== 22:46:16.797455 | c8c72150-a01d-4398-9eaa-a297dbe20af3 ==============================
+[0m22:46:16.797455 [info ] [MainThread]: Running with dbt=1.11.2
+[0m22:46:16.797915 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'quiet': 'False', 'write_json': 'True', 'use_colors': 'True', 'empty': 'False', 'introspect': 'True', 'invocation_command': 'dbt run --select staging', 'target_path': 'None', 'static_parser': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'debug': 'False', 'use_experimental_parser': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/sarah/.dbt', 'partial_parse': 'True', 'no_print': 'None', 'version_check': 'True', 'log_format': 'default', 'log_cache_events': 'False'}
+[0m22:46:16.798306 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/sarah/Desktop/git/Spotify FP&A/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:46:16.806058 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.061169874, "process_in_blocks": "0", "process_kernel_time": 0.165589, "process_mem_max_rss": "111050752", "process_out_blocks": "0", "process_user_time": 0.701176}
+[0m22:46:16.806407 [debug] [MainThread]: Command `dbt run` failed at 22:46:16.806353 after 0.06 seconds
+[0m22:46:16.806631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11295fdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1129c36b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1129c3530>]}
+[0m22:46:16.806821 [debug] [MainThread]: Flushing usage events
+[0m22:46:16.906019 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:27:47.990159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1214c70b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1224c7710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1224c73b0>]}
+
+
+============================== 18:27:47.993010 | 70ec5abd-b69f-458b-9f4c-13f918f84490 ==============================
+[0m18:27:47.993010 [info ] [MainThread]: Running with dbt=1.11.2
+[0m18:27:47.993355 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'no_print': 'None', 'log_format': 'default', 'empty': 'False', 'invocation_command': 'dbt run --select staging', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'introspect': 'True', 'profiles_dir': '/Users/sarah/.dbt', 'indirect_selection': 'eager', 'warn_error': 'None', 'write_json': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'partial_parse': 'True', 'static_parser': 'True', 'use_colors': 'True', 'quiet': 'False', 'printer_width': '80', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False'}
+[0m18:27:47.993699 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/sarah/Desktop/git/Spotify FP&A/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:27:47.994941 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.047206625, "process_in_blocks": "0", "process_kernel_time": 0.142462, "process_mem_max_rss": "112017408", "process_out_blocks": "0", "process_user_time": 0.693973}
+[0m18:27:47.995220 [debug] [MainThread]: Command `dbt run` failed at 18:27:47.995171 after 0.05 seconds
+[0m18:27:47.995411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122338f80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1221b63f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12245f740>]}
+[0m18:27:47.995584 [debug] [MainThread]: Flushing usage events
+[0m18:27:48.109624 [debug] [MainThread]: An error was encountered while trying to flush usage events

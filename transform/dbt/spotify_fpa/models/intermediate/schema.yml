@@ -1,0 +1,171 @@
+version: 2
+
+models:
+  - name: int_podcast_details
+    description: "Intermediate table for podcast details from Spotify"
+    columns:
+      - name: podcast_id
+        description: "Unique ID for each podcast"
+        tests:
+          - not_null
+          - unique
+
+      - name: podcast_name
+        description: "Name of the podcast"
+        tests:
+          - not_null
+
+      - name: publisher
+        description: "Name of the publisher"
+        tests:
+          - not_null
+
+      - name: total_episodes
+        description: "Total number of episodes in the podcast"
+
+      - name: languages
+        description: "List of languages the podcast is available in"
+        tests:
+          - not_null
+
+      - name: media_type
+        description: "Type of media (e.g., music, podcast)"
+        tests:
+          - not_null
+
+      - name: base_language
+        description: "Base language"
+        tests:
+          - base_language
+
+      - name: language_region
+        tests:
+          - language_region
+
+      - name: streams
+        tests:
+          - streams
+
+      - name: impressions_per_stream
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 1
+              max_value: 4
+
+  - name: int_podcasts
+    description: "Intermediate table for podcasts from Spotify"
+    columns:
+      - name: podcast_id
+        description: "Unique ID for each podcast"
+        tests:
+          - not_null
+          - unique
+
+      - name: podcast_name
+        description: "Name of the podcast"
+        tests:
+          - not_null
+
+      - name: publisher
+        description: "Name of the publisher"
+        tests:
+          - not_null
+
+      - name: total_episodes
+        description: "Total number of episodes in the podcast"
+
+      - name: languages
+        description: "List of languages the podcast is available in"
+        tests:
+          - not_null
+
+      - name: media_type
+        description: "Type of media (e.g., music, podcast)"
+        tests:
+          - not_null
+
+      - name: base_language
+        description: "Base language"
+        tests:
+          - base_language
+
+      - name: language_region
+        tests:
+          - language_region
+
+      - name: streams
+        tests:
+          - streams
+
+      - name: impressions_per_stream
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 1
+              max_value: 4
+
+      - name: genre
+        description: "Genre of the podcast"
+        tests:
+          - not_null
+
+  - name: int_tracks
+    description: "Intermediate table for track details from Spotify"
+    columns:
+        - name: track_id
+          description: "Unique ID for each track"
+          tests:
+            - not_null
+            - unique
+
+        - name: track_name
+          description: "Name of the track"
+          tests:
+            - not_null
+
+        - name: artist_id
+          description: "Unique ID for the primary artist"
+          tests:
+            - not_null
+
+        - name: artist_name
+          description: "Name of the primary artist"
+          tests:
+            - not_null
+
+        - name: album_total_tracks
+          description: "Total number of tracks in the album"
+
+        - name: duration_ms
+          description: "Duration of the track in milliseconds"
+
+        - name: track_length_category
+          description: "Categorization of track length (Short, Medium, Long)"
+          tests:
+            - not_null
+
+        - name: duration_minutes
+          description: "Duration of the track in minutes"
+
+        - name: popularity_band
+          tests:
+            - not_null
+
+        - name: release_date_normalized
+          tests:
+            - date_normalized
+
+        - name: streams
+          tests:
+            - streams
+
+        - name: impressions_per_stream
+          tests:
+            - not_null
+            - dbt_utils.accepted_range:
+                min_value: 1
+                max_value: 3
+
+
+
