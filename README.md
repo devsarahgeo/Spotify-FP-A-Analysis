@@ -2,22 +2,14 @@
 
 ## 🧭 Executive Summary 
 <p>
-This analysis evaluates the key financial drivers of advertising and podcast revenue. It examines how user engagement, content mix (music vs. podcasts), pricing strategy, and ad monetization efficiency influence revenue growth, gross margins, and long-term profitability.
+This analysis evaluates Spotify's 2024 advertising revenue performance across content type, artist, and time — identifying key drivers of ad revenue growth and gross margin to inform strategic investment and promotional decisions that maximize long-term profitability.
 </p>
 
 ---
 
 ### 💼 Business Problem
 <p>
-Spotify needs to improve revenue growth and profitability, but it is unclear which operational and financial levers (engagement, content mix, pricing, or ad monetization) have the greatest impact on margins and long-term value.
-
-Without understanding these drivers, the company cannot confidently decide:
-
-Whether to push podcast growth vs. music
-
-Whether to increase ad load
-
-Where to allocate investment for maximum profitability
+Spotify needs to improve ad revenue growth and profitability, but it is unclear which levers — content mix, stream volume, or artist investment, have the greatest impact on margins. Without understanding these drivers, the company cannot confidently decide whether to prioritize podcast vs music growth, or where to allocate promotional investment for maximum return.
 
 </p>
 
@@ -27,48 +19,21 @@ Where to allocate investment for maximum profitability
   
 #### Revenue & Engagement Questions
 
-Which podcasts, tracks and artists drive the most revenue? - 
-
-How does user engagement (streams) impact revenue?
-
-Which genres monetize best?
-
-How release patterns affect monetization?
-
-How sensitive revenue is to CPM changes?
-
-#### Cost & Margin Questions
+Which podcasts, tracks and artists drive the most revenue? 
 
 Are podcasts more profitable than music? or Which content types have the highest gross margin? or What should Spotify invest more in?
 
-Does higher engagement always mean higher margin? 
+How does user engagement (streams) impact revenue?
 
-Which content destroys margin?
+Which genres monetize best
 
-#### Scenario & Forecasting Questions
-(You can model:
+Which content has highest gross margin and which content destroys margin?
 
-+10% streams
-
--5% CPM
-
-Royalty increase
-
-Geographic shift
-
-Now you're answering:
-
-If CPM drops 10%, what happens to margin?
-
-That’s not reporting.
-
-That’s forecast modeling.)
+#### Scenario & Forecasting Based Questions
 
 What happens if streams increase 10–20%?
 
 What is the impact of a 5–10% CPM change on revenue?
-
-Which content types or geographies provide the best ROI?
 
 </p>
 
@@ -76,29 +41,21 @@ Which content types or geographies provide the best ROI?
 
 ## 💻 Git File Structure Explained:
 
-<strong>analysis_notebooks/olist_analysis_with_eda.ipynb</strong> : This code does EDA, generates answers for each analysis question and can also be used to validate the final bi analysis results.
+<strong>eda_notebook/modeling.ipynb</strong> : scenario model using the key revenue levers — stream volume and CPM — to project revenue uplift under different investment scenarios. 
 
-<strong>analysis_notebooks/olist_analysis_for_bi.ipynb</strong> : This code generates combined tables to answer multiple business questions for use in a BI tool.
+<strong>extract/</strong> : using spotify web api to extract tables needed and dump then to Google Cloud Storage(GCS)
 
-<strong>final_demo/Olist-Ecommerce-Analysis</strong> : Final demo/business insights showcase made by storing data in Google BigQuery and using Looker to visualize.
+<strong>transform/dbt</strong> : Under this the model folder is divided into staging, intermediate(transformations) and marts(final dim/fct tables for reporting tool), test folder has custom test cases other than built in test cases in schema.yml(for each layer)
 
-<strong>config</strong> : All paths
-
-<strong>data</strong> : Raw and processed data
-
-<strong>etl</strong> : All ETL steps split into clear stages for ease of testing, replacing
-
-<strong>utils</strong> : Common reusable functions
-
-<strong>pipelines</strong> : A central place to define what runs, in which order, and how. They orchestrate the different ETL steps (extract, transform, load) and ensure everything runs smoothly.
+<strong>utils/</strong> : Common functions
 
 ---
 
 ## 🧠 Skills & Tech Stack
 <ul>
   <li><strong>Visual Studio Code</strong> – Central development environment</li>
-    <li><strong>Google Clod storage (GCS)</strong> – Raw Data Store (Data Lake)</li>
-  <li><strong>BigQuery</strong> – Cloud Data Warehouse</li>
+    <li><strong>Google Cloud storage (GCS)</strong> – Raw Data Store (Data Lake)</li>
+  <li><strong>Google BigQuery</strong> – Cloud Data Warehouse</li>
   <li><strong>PowerBI</strong> – Data visualization and storytelling</li>
   <li><strong>SQL and Python</strong> – Analytical querying</li>
 </ul>
@@ -106,8 +63,6 @@ Which content types or geographies provide the best ROI?
 ---
 
 ## ⚙️ Methodology 
-
-Designed a multi-table analytical model using SQL (joins, CTEs, window functions) and Python to derive core e-commerce metrics. Conducted category, regional, and customer segmentation analysis to identify GTM opportunities and growth signals, and communicated insights via Looker dashboards.
 
 <h3>1. Dataset Used:</h3> 
 Spotify Web API - https://developer.spotify.com/documentation/web-api/
@@ -119,8 +74,27 @@ I simulated the user data, I used a constant CPM throught 2024 and since stream 
 <h3>2. Architecture Diagram:</h3>
 <img width="696" height="1106" alt="Olist E-commerce Data Pipeline Architecture - visual selection (2)" src="https://github.com/user-attachments/assets/58e75b41-91e4-4576-90ee-95a81410b152" />
 
-<h3>3. Database (Postgres) showing cardinality relationship</h3>
-<img width="1461" height="814" alt="Screenshot 2026-01-29 at 5 14 20 PM" src="https://github.com/user-attachments/assets/65e1e763-07a8-4db0-90fb-7d74d2534433" />
+<h3>dbt Implementation:</h3>
+
+- Staging layer — standardized raw BigQuery tables through column renaming, data type casting and null handling, creating clean reusable source models
+- Intermediate layer — applied business logic and joins across staging models to create enriched datasets for downstream consumption
+- Marts layer — built production-ready dimensional models (dim/fct tables) consumed directly by Power BI for reporting
+- Seeds — used for static reference data (e.g. CPM rates by content type) loaded directly into BigQuery via dbt
+- Macros — wrote reusable SQL macros to standardize repetitive transformation logic across models
+- Testing — implemented schema tests (not_null, unique, accepted_values) and custom tests for each layer to ensure data quality and pipeline reliability
+
+<h3>Power BI & Advanced Analytics:</h3>
+
+- Built advanced DAX measures including MoM% revenue change, dynamic min/max data point identification and a calculated sort column for short month formatting
+- Developed a driver-based scenario model projecting revenue uplift under 10-20% stream growth and 5-10% CPM change scenarios — providing actionable forecasting without reliance on black-box statistical models
+- Designed an interactive dashboard with content type slicer enabling dynamic filtering across all visuals
+
+<h3>3. Google Cloud Storage & Google Big Query</h3>
+
+<img width="1161" height="490" alt="gcs" src="https://github.com/user-attachments/assets/33f8568d-e52e-469e-a4e6-9c60aa02bea9" />
+
+<img width="978" height="829" alt="google bigquery" src="https://github.com/user-attachments/assets/45ad3974-8624-4480-a837-950d6aead859" />
+
 
 ---
 
@@ -128,84 +102,24 @@ I simulated the user data, I used a constant CPM throught 2024 and since stream 
 
 Power BI Report Snapshot:
 
-<img width="1425" height="803" alt="Screenshot 2026-02-24 at 12 24 11 AM" src="https://github.com/user-attachments/assets/cce9a27e-d779-46ed-9a2e-d88423ba2822" />
-
+<img width="1427" height="804" alt="Screenshot 2026-02-24 at 12 50 15 PM" src="https://github.com/user-attachments/assets/d001172f-f341-4d07-bb89-1d4b0c546444" />
 
 ---
 
 ## 📊 Business Insights & Recommendations
 
-
-<u>**Key Metrics / Highlights**</u>:
-
-| **Metric**                   | **Highlight**                           |
-| ---------------------------- | --------------------------------------- |
-| **Top Seller GMV**           | 227k                                    |
-| **Top Product Category**     | Health & Beauty                         |
-| **Highest Repeat Purchases** | Arts & Craftsmanship                    |
-| **Peak Sales Months**        | May & August                            |
-| **Highest Cancellations**    | Sports Leisure product category         |
-| **Top Cities**               | Sao Paulo & Rio de Janeiro              |
-
-
-**Business Insights, Impact & Recommendations**:
-
-<ul>
-<li> New customers drive the majority(~31%) of GMV, making customer acquisition a primary growth lever. 
-
- <u><b>Recommendation:</b></u> Launch targeted campaigns to acquire new customers. 
-</li>
-
-<li> Repeat customer activity peaks in October, indicating opportunities for targeted retention and promotional strategies.
-
- <u><b>Recommendation:</b></u> October retention peak suggests running loyalty campaigns before Q4. </li>
-
-<li>Customer activity concentrated in Sao Paulo & Rio de Janeiro. Geographic concentration shows high-value markets.
-  
- <u><b>Recommendation:</b></u> Strengthen retention, logistics, and seller support in Sao Paulo and Rio de Janeiro while expanding acquisition efforts in emerging cities. Run acquisition campaigns and seller onboarding in emerging cities to expand reach. </li>
-
-<li>
-Customers can be grouped into RFM segments (Recency, Frequency, Monetary). Each segment behaves differently (e.g., frequent high-spenders vs. new low-spenders).
-  
-Tailoring campaigns to segments can improve revenue and ROI. Generic campaigns may underperform because they ignore behavioral differences
-  
- <u><b>Recommendation:</b></u> Implement segment-specific marketing strategies tailored to each RFM segment to maximize revenue growth and efficiency:
-
-- Retain high-value customers with loyalty campaigns
-- Re-engage At-Risk High-Value Customers (“Cannot Lose Them” customer segment) through targeted campaigns before they churn.
-- Increase spending among Potential Loyalists via personalized recommendations, cross-selling, and promotions.
-    
-</li>
-
-<li>
-Historical data shows GMV peaks in May and August. These months consistently generate more revenue than others.
-
-The business can maximize revenue by focusing marketing and promotional efforts during these peak months.
-
- <u><b>Recommendation:</b></u> Run special offers, loyalty programs, and targeted campaigns in May and August to capitalize on high GMV periods.
-</li>
-
-<li>
-  Sports Leisure product category has high cancellation rates
-  
-  High cancellations reduce customer satisfaction, revenue, and operational efficiency.
-
-   <u><b>Recommendation:</b></u> Investigate and resolve high-cancellation products and sellers. Improve logistics, inventory planning, and category-specific processes to reduce cancellations.
-  
-</li>
-
-</ul>
+<img width="1363" height="401" alt="Screenshot 2026-02-24 at 12 57 01 PM" src="https://github.com/user-attachments/assets/047c8725-f9a6-43b7-baca-45cb892cbcaa" />
 
 ---
 
 ## ⚡ Future Scope - Scalable Implementation 
-*(If the project needs to handle additional data or extended time periods in the future)*
 
 <ul>
-<li> <b>Data Validation</b>: Implement CI/CD pipelines to automatically check schema consistency, null values, and aggregation sanity.</li>
+<li> <b>Automation & Orchestration:</b>: 
+Apache Airflow can be used to schedule and orchestrate the end-to-end ELT pipeline — automating data ingestion from Spotify API, GCS uploads, BigQuery loads and dbt model runs on a daily/weekly cadence, replacing manual execution with a fully automated workflow.</li>
 
-<li> <b>Cloud Data Warehouse</b>: Store both raw and BI-ready tables directly in BigQuery or Snowflake, bypassing local Postgres to ensure scalability and performance.</li>
-
+<li> <b>Real-time streaming</b>:
+Replace batch ingestion with real-time streaming using Google Pub/Sub or Kafka — enabling live ad revenue monitoring</li>
 </ul>
 
 
