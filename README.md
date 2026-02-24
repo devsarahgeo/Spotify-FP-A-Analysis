@@ -84,7 +84,7 @@ Note:
 - Macros - wrote reusable SQL macros to standardize repetitive transformation logic across models
 - Testing - implemented schema tests (not_null, unique, accepted_values) for each layer and custom tests to ensure data quality and pipeline reliability
 
-<h3>Lineage graph of one table (podcasts) using "dbt docs serve"</h3>
+<h3>Lineage graph of one table (fct_podcast_streams) using "dbt docs serve"</h3>
 <img width="1811" height="737" alt="dbt generate" src="https://github.com/user-attachments/assets/5cdccc8b-093f-45ef-a621-c6e1148607a7" />
 
 <h3>Power BI & Advanced Analytics:</h3>
