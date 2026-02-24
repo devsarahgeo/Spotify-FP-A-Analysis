@@ -43,6 +43,8 @@ What is the impact of a 5–10% CPM change on revenue?
 
 <strong>eda_notebook/modeling.ipynb</strong> : scenario model using the key revenue levers like stream volume and CPM, to project revenue uplift under different investment scenarios. 
 
+<strong>eda_notebook/eda.ipynb</strong> : intial data exploration
+
 <strong>extract/</strong> : using spotify web api to extract tables needed and dump then to Google Cloud Storage(GCS)
 
 <strong>transform/dbt</strong> : Under this the model folder is divided into staging, intermediate(transformations) and marts(final dim/fct tables for reporting tool), test folder has custom test cases other than built in test cases in schema.yml(for each layer)
