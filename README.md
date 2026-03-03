@@ -1,4 +1,4 @@
-# Spotify FP&A (Financial Planning & Analysis)
+# Ad Revenue and Financial Analytics
 
 ## 🧭 Executive Summary 
 <p>
