@@ -1,4 +1,4 @@
-# Ad Revenue and Financial Analytics
+# Ad Revenue and Financial Analytics (FP&A)
 
 ## 🧭 Executive Summary 
 <p>
